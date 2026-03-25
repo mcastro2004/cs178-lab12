@@ -31,7 +31,17 @@ def hello(name):
 
 @app.route('/analyze/<word>')
 def analyze(word):
-    return str(len(word))
+    num_chars = len(word)
+
+    num_vowels = 0
+    for char in word.lower():
+        if char in 'aeiou':
+            num_vowels += 1
+
+    return render_template('analyze.html',
+                           word=word,
+                           num_chars=num_chars,
+                           num_vowels=num_vowels)
 
 
 # ============================================================
