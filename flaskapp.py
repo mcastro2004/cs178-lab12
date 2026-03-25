@@ -1,6 +1,7 @@
+# Lab 12 - Michael Castro
 from flask import Flask, render_template
 
-# Lab 12 - Your Name
+ 
 # Flask needs to know the name of this file to find templates and static files
 app = Flask(__name__)
 
